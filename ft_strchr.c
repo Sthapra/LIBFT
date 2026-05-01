@@ -6,7 +6,7 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 16:25:20 by prashres          #+#    #+#             */
-/*   Updated: 2026/04/20 14:43:52 by prashres         ###   ########.fr       */
+/*   Updated: 2026/04/30 15:15:22 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,11 @@ if (*s == c)
 }
 return (NULL);
 }
-
-
-int main ()
-{
-	char *s = "sdf";
-	int a = 'd';
-	printf("%s\n", ft_strchr(s , a));
-	printf("%s\n", strchr(s , a));
+// int main ()
+// {
+// 	char *s = "sdfkadsfasdf";
+// 	int a = 'd';
+// 	printf("%s\n", ft_strchr(s , a));
+// 	printf("%s\n", strchr(s , a));
 	
-}
+// }

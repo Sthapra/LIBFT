@@ -6,7 +6,7 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 12:40:59 by prashres          #+#    #+#             */
-/*   Updated: 2026/04/20 13:33:44 by prashres         ###   ########.fr       */
+/*   Updated: 2026/04/28 13:20:29 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ char *ft_strrchr(const char *s, int c)
 	}
 	return(NULL);
 }
-int main ()
-{
-	char *s = "sdfgdsg";
-	int a = 'd';
-	printf("%s\n", ft_strrchr(s , a));
-	printf("%s\n", strrchr(s , a));
+// int main ()
+// {
+// 	char *s = "sdfgdsg";
+// 	int a = 'd';
+// 	printf("%s\n", ft_strrchr(s , a));
+// 	printf("%s\n", strrchr(s , a));
 	
-}
+// }

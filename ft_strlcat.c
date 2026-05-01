@@ -6,7 +6,7 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 12:20:34 by prashres          #+#    #+#             */
-/*   Updated: 2026/04/21 14:48:46 by prashres         ###   ########.fr       */
+/*   Updated: 2026/04/28 13:20:11 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dstlen] = '\0';
 	return (i + srclen);
 }
-int main(void)
-{
-    char    str1[0] = "Have";
-    const char    *str2 = "We";
-	size_t i = sizeof(str1);
-	printf ("%zu is the length of final result", ft_strlcat(str1, str2, i));
+// int main(void)
+// {
+//     char    str1[0] = "Have";
+//     const char    *str2 = "We";
+// 	size_t i = sizeof(str1);
+// 	printf ("%zu is the length of final result", ft_strlcat(str1, str2, i));
 	
-} 
+// } 

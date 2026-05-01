@@ -6,7 +6,7 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 13:49:55 by prashres          #+#    #+#             */
-/*   Updated: 2026/04/17 16:20:42 by prashres         ###   ########.fr       */
+/*   Updated: 2026/04/29 15:14:33 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,9 @@ size_t ft_strlen (const char *s)
 	}
 	return (i);
 }
+// int main ()
+// {
+// 	char *s = "hello";
+	
+// 	printf("%zu", ft_strlen(s));
+// }

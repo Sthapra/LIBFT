@@ -6,7 +6,7 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 11:35:39 by prashres          #+#    #+#             */
-/*   Updated: 2026/04/17 16:24:45 by prashres         ###   ########.fr       */
+/*   Updated: 2026/04/28 13:21:05 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ int ft_atoi (const char *nptr)
 	}
 	return (final * sign);
 }
-int main ()
-{
-	char a[100] = " 	123AB8c";
+// int main ()
+// {
+// 	char a[100] = " 	123AB8c";
 	
-	printf("%d\n", atoi(a));
-	printf("%d", ft_atoi(a));
+// 	printf("%d\n", atoi(a));
+// 	printf("%d", ft_atoi(a));
 		
-}
+// }

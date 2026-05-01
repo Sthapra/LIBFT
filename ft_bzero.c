@@ -6,13 +6,13 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 15:52:17 by prashres          #+#    #+#             */
-/*   Updated: 2026/04/16 15:57:50 by prashres         ###   ########.fr       */
+/*   Updated: 2026/04/28 15:38:32 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void bzero (void *s, size_t n)
+void ft_bzero (void *s, size_t n)
 {
 	ft_memset (s, '\0', n);
 }

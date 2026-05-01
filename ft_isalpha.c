@@ -6,7 +6,7 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/10 16:23:35 by prashres          #+#    #+#             */
-/*   Updated: 2026/04/20 11:28:09 by prashres         ###   ########.fr       */
+/*   Updated: 2026/04/21 11:34:56 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ int	ft_isalpha(int c)
 	if((c >= 'A' && c <='Z') || (c >= 'a' && c <='z'))
 		return (1);
 	else 
-		return (c);
+		return (0);
 }

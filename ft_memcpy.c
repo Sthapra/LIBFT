@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/14 18:07:06 by prashres          #+#    #+#             */
-/*   Updated: 2026/04/28 13:19:57 by prashres         ###   ########.fr       */
+/*   Created: 2026/04/24 14:13:06 by prashres          #+#    #+#             */
+/*   Updated: 2026/04/24 14:42:25 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t i = 0;
-	if (size > 0)
+	size_t i;
+	unsigned char *a;
+	const unsigned char *b;
+	
+	if (!dest && !src)
+	return (NULL);
+	
+	i = 0;
+	a = (unsigned char *)dest;
+	b = (const unsigned char *)src;
+	
+	while (i < n)
 	{
-		while (i < (size - 1) && src[i])
-		{
-			dst[i] = src[i] ;
-			i++;
-		}
-		dst[i] = '\0';
+		a[i] = b[i];
+		i++;
 	}
-	return (ft_strlen (src));
+	return (dest);
 }
-// int main(void)
-// {
-//     char    *str1 = "Hello";
-//     char    str2[3];
-//     size_t  i;
-//     i = ft_strlcpy(str2, str1, 3);
-//     printf("Copied is: %s and source len is: %zu\n", str2, i);
-//     return (0);
-// }
