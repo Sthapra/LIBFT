@@ -1,42 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/20 12:40:59 by prashres          #+#    #+#             */
-/*   Updated: 2026/05/05 19:41:07 by prashres         ###   ########.fr       */
+/*   Created: 2026/05/08 12:15:33 by prashres          #+#    #+#             */
+/*   Updated: 2026/05/08 19:01:23 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+t_list	*ft_lstnew(void *content)
 {
-	while (*s)
-	{
-		s++;
-	}
-	while (*s > 0 && *s--)
-	{
-		if (*s == c)
-		{
-			return ((char *)s);
-			s++;
-		}
-	}
-	if (*s == c)
-	{
-		return ((char *)s);
-	}
-	return(NULL);
+	t_list *new;
+
+	new = malloc (sizeof (t_list));
+	if (!new)
+		return(NULL);
+	new->content = content;
+	new->next = NULL;
+	return(new);
 }
-// int main ()
-// {
-// 	char *s = "sdfgdsg";
-// 	int a = 'd';
-// 	printf("%s\n", ft_strrchr(s , a));
-// 	printf("%s\n", strrchr(s , a));
-	
-// }
+

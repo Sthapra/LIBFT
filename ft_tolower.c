@@ -6,7 +6,7 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 11:32:07 by prashres          #+#    #+#             */
-/*   Updated: 2026/04/17 11:38:02 by prashres         ###   ########.fr       */
+/*   Updated: 2026/05/06 14:31:55 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int ft_tolower(int c)
 {
 	if (c >= 'A' && c <='Z')
 	{
-		return (c = c + 32);
+		return (c + 32);
 	}
 	return (0);
 }

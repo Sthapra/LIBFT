@@ -6,21 +6,20 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 10:56:58 by prashres          #+#    #+#             */
-/*   Updated: 2026/05/04 13:17:50 by prashres         ###   ########.fr       */
+/*   Updated: 2026/05/06 12:36:47 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t count_word(char const *s, char c)
+static size_t	count_word(char const *s, char c)
 {
-	size_t i;
-	size_t count;
+	size_t	i;
+	size_t	count;
 
 	i = 0;
 	count = 0;
-	
-	while(s[i] && s[i] == c)
+	while (s[i] && s[i] == c)
 		i++;
 	while (s[i])
 	{
@@ -28,22 +27,21 @@ static size_t count_word(char const *s, char c)
 		{
 			count++;
 			while (s[i] && s[i] != c)
-			i++;
+				i++;
 		}
-		else 
-		i++;
+		else
+			i++;
 	}
-	return(count);
-} 
+	return (count);
+}
 
-static size_t get_word(char const *s, char c)
+static size_t	get_word(char const *s, char c)
 {
-	size_t i;
-	size_t count;
+	size_t	i;
+	size_t	count;
 
 	count = 0;
 	i = 0;
-	
 	while (s[i] && s[i] != c)
 	{
 		count++;
@@ -52,40 +50,40 @@ static size_t get_word(char const *s, char c)
 	return (count);
 }
 
-static void ft_free(char **s , int c)
+static void	ft_free(char **s, int c)
 {
 	while (c-- > 0)
-		free (s[c]);
+		free(s[c]);
 	free(s);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **result;
-	size_t i;
-	size_t index;
-	
+	char	**result;
+	size_t	i;
+	size_t	index;
+
 	i = 0;
 	index = 0;
 	if (!s)
-    	return (NULL);
-	result = malloc ((count_word(s, c) + 1) * sizeof(char *)  );
+		return (NULL);
+	result = malloc ((count_word(s, c) + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
-	while(s[i])
+	while (s[i])
 	{
 		while (s[i] && s[i] == c)
 			i++;
 		if (!s[i])
-			break;
+			break ;
 		result[index] = ft_substr(s, i, get_word(&s[i], c));
-		if(!result[index])
-			return(ft_free(result, index), NULL);
+		if (!result[index])
+			return (ft_free(result, index), NULL);
 		i = i + get_word(&s[i], c);
 		index++;
 	}
 	result[index] = NULL;
-	return(result);
+	return (result);
 }
 
 // int main(int ac, char **av)

@@ -1,41 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/28 13:42:56 by prashres          #+#    #+#             */
-/*   Updated: 2026/05/05 19:38:09 by prashres         ###   ########.fr       */
+/*   Created: 2026/05/08 11:49:36 by prashres          #+#    #+#             */
+/*   Updated: 2026/05/08 12:09:30 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t i;
-	const unsigned char *str1;
-	const unsigned char *str2;
+	char c;
+	long long nb;
 
-	i = 0;
-	str1 = (const unsigned char *)s1;
-	str2 = (const unsigned char *)s2;
-	
-	while (i < n)
+	nb = n;
+	if (nb < 0)
 	{
-		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
-		i++;
+		ft_putchar_fd('-', fd);
+		nb = -nb;
 	}
-	return (0);
+	if (nb > 9)
+		ft_putnbr_fd((nb / 10), fd);
+	c = nb % 10 + '0';
+	ft_putchar_fd(c, fd);
 }
 // int main()
 // {
-	
-// 	char *s1 = "abc";
-// 	char *s2 = "abd";
-	
-// 	ft_memcmp(s1, s2, 3);  // returns negative (c < d)
-// 	ft_memcmp(s1, s2, 2);  // returns 0 (ab == ab)
+// 	ft_putnbr_fd(222, 1);
+// 	ft_putchar_fd('\n', 1);
+// 	ft_putnbr_fd(2147483647, 1);
+// 	ft_putchar_fd('\n', 1);
+// 	ft_putnbr_fd(-2147483648, 1);
+// 	ft_putchar_fd('\n', 1);
+// 	ft_putnbr_fd(0, 1);
+// 	ft_putchar_fd('\n', 1);
+// 	return (0);
 // }

@@ -1,41 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/28 13:42:56 by prashres          #+#    #+#             */
-/*   Updated: 2026/05/05 19:38:09 by prashres         ###   ########.fr       */
+/*   Created: 2026/05/06 15:14:32 by prashres          #+#    #+#             */
+/*   Updated: 2026/05/06 15:47:32 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+void	ft_striteri(char *s, void(*f)(unsigned int, char*))
 {
-	size_t i;
-	const unsigned char *str1;
-	const unsigned char *str2;
+	unsigned int i;
 
 	i = 0;
-	str1 = (const unsigned char *)s1;
-	str2 = (const unsigned char *)s2;
-	
-	while (i < n)
+	if (!s || !f)
+		return;
+	while(s[i])
 	{
-		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
+		f(i, &s[i]);
 		i++;
 	}
-	return (0);
 }
-// int main()
+// void to_upper_all(unsigned int i, char *c)
 // {
-	
-// 	char *s1 = "abc";
-// 	char *s2 = "abd";
-	
-// 	ft_memcmp(s1, s2, 3);  // returns negative (c < d)
-// 	ft_memcmp(s1, s2, 2);  // returns 0 (ab == ab)
+//     (void)i;
+//     if(*c >= 'a' && *c <= 'z')
+// 	{
+// 		*c = *c- 32;
+// 	}
+// }
+// 	int main()
+// {
+// 	// unsigned int i = 0;
+//     char s[] = "dkhvcdn";
+// 	// char *d = to_upper_all(i ,s);
+// 	ft_striteri(s, to_upper_all);
+//     printf("%s\n",s);
 // }

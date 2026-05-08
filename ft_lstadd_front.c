@@ -1,42 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/20 12:40:59 by prashres          #+#    #+#             */
-/*   Updated: 2026/05/05 19:41:07 by prashres         ###   ########.fr       */
+/*   Created: 2026/05/08 19:01:49 by prashres          #+#    #+#             */
+/*   Updated: 2026/05/08 19:06:10 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	while (*s)
-	{
-		s++;
-	}
-	while (*s > 0 && *s--)
-	{
-		if (*s == c)
-		{
-			return ((char *)s);
-			s++;
-		}
-	}
-	if (*s == c)
-	{
-		return ((char *)s);
-	}
-	return(NULL);
+	if (!lst || new)
+		return (NULL);
+	new->next = *lst;
+	*lst = new;
 }
-// int main ()
-// {
-// 	char *s = "sdfgdsg";
-// 	int a = 'd';
-// 	printf("%s\n", ft_strrchr(s , a));
-// 	printf("%s\n", strrchr(s , a));
-	
-// }

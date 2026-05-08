@@ -6,7 +6,7 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 11:29:15 by prashres          #+#    #+#             */
-/*   Updated: 2026/04/17 11:31:36 by prashres         ###   ########.fr       */
+/*   Updated: 2026/05/06 14:33:10 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 int ft_toupper(int c)
 {
 	if (c >= 'a' && c <='z')
-	{
-		return (c = c - 32);
-	}
+		return (c - 32);
 	return (0);
 }

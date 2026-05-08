@@ -6,7 +6,7 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 13:59:15 by prashres          #+#    #+#             */
-/*   Updated: 2026/04/28 15:38:16 by prashres         ###   ########.fr       */
+/*   Updated: 2026/05/08 16:47:35 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,14 @@ void *ft_memset (void *s, int c, size_t n)
 		((unsigned char *)s )[i] = (unsigned char )c;
 		i++;
 	}
+	return((unsigned char *)s);
 }
-// void *s is the destination where we want to fill.(could be of any data type)
-// int c is the value you want to fill it with (which gets converted to unsigned char internally)
-// size_t is unsigned integer (because size can never be negative)
-// int main ()
+
+// int main()
 // {
-// 	char *s[6] = "hellop";
-// 	int a = 'a';
-// 	size_t n = 3;
+//     char buffer[5];
+//     ft_memset(buffer, 'A', 5);
+//     printf("%s\n", buffer);
+//     memset(buffer, 'B', 5);
+//     printf("%s\n", buffer);
 // }

@@ -6,7 +6,7 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 13:33:33 by prashres          #+#    #+#             */
-/*   Updated: 2026/04/17 14:29:19 by prashres         ###   ########.fr       */
+/*   Updated: 2026/05/05 19:35:44 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int ft_isalnum (int c)
 {
-	return (ft_isdigit(c) || ft_isclpha(c));
+	return (ft_isdigit(c) || ft_isalpha(c));
 }

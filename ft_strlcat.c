@@ -6,7 +6,7 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 12:20:34 by prashres          #+#    #+#             */
-/*   Updated: 2026/04/28 13:20:11 by prashres         ###   ########.fr       */
+/*   Updated: 2026/05/08 19:01:08 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,14 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 	size_t dstlen;
 	size_t srclen;
 	size_t i;
-	
+
+	if (size == 0)
+		return (ft_strlen(src));
 	j = 0;
 	dstlen = ft_strlen(dst);
 	srclen = ft_strlen(src);
 	i = dstlen;
 	
-	if (size == 0)
-	return (dstlen + srclen);
-
 	if (size <= dstlen)
 		return (size + srclen);
 	while (src[j] && dstlen < (size - 1))
@@ -40,9 +39,10 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 }
 // int main(void)
 // {
-//     char    str1[0] = "Have";
-//     const char    *str2 = "We";
-// 	size_t i = sizeof(str1);
-// 	printf ("%zu is the length of final result", ft_strlcat(str1, str2, i));
-	
+//     char    str1[] = "abcde";
+// 	char    str2[] = "abc";
+// 	char    str3[] = "abcde";
+// 	char    str4[] = "abc";
+// 	printf ("%zu is the length of final result\n", ft_strlcat(str1, str2, 2));
+// 	printf ("%zu is the length of final result\n", strlcat(str3, str4, 2));
 // } 

@@ -1,42 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/20 12:40:59 by prashres          #+#    #+#             */
-/*   Updated: 2026/05/05 19:41:07 by prashres         ###   ########.fr       */
+/*   Created: 2026/05/08 19:21:51 by prashres          #+#    #+#             */
+/*   Updated: 2026/05/08 19:30:31 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+t_list *ft_lstlast (t_list *lst)
 {
-	while (*s)
-	{
-		s++;
-	}
-	while (*s > 0 && *s--)
-	{
-		if (*s == c)
-		{
-			return ((char *)s);
-			s++;
-		}
-	}
-	if (*s == c)
-	{
-		return ((char *)s);
-	}
-	return(NULL);
+	if (!lst)
+		return (NULL);
+	while(lst->next != NULL)
+		lst = lst->next; 
+	return (lst);
 }
-// int main ()
-// {
-// 	char *s = "sdfgdsg";
-// 	int a = 'd';
-// 	printf("%s\n", ft_strrchr(s , a));
-// 	printf("%s\n", strrchr(s , a));
-	
-// }
+

@@ -6,7 +6,7 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 10:49:47 by prashres          #+#    #+#             */
-/*   Updated: 2026/05/04 13:10:55 by prashres         ###   ########.fr       */
+/*   Updated: 2026/05/05 19:41:27 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 	}		
 	return (NULL);
 }
-int main()
-{
-	const char *s1 = "Created: 2026/04/24 10:49:47 by prashres";
-	const char *s2 = "";
-	size_t len = 40;
-	// ft_strnstr(s1, s2, 40);
-	printf ("%s\n", ft_strnstr(s1, s2, 40));
-}
+// int main()
+// {
+// 	const char *s1 = "Created: 2026/04/24 10:49:47 by prashres";
+// 	const char *s2 = "";
+// 	size_t len = 40;
+// 	// ft_strnstr(s1, s2, 40);
+// 	printf ("%s\n", ft_strnstr(s1, s2, 40));
+// }

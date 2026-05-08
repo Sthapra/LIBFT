@@ -6,7 +6,7 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 14:14:27 by prashres          #+#    #+#             */
-/*   Updated: 2026/04/29 14:41:07 by prashres         ###   ########.fr       */
+/*   Updated: 2026/05/08 16:53:49 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ptr = malloc(nmemb * size);
 	if(!ptr)
 		return (NULL);
-	ft_memset(ptr, 0, nmemb* size);
+	ft_memset(ptr, 0, nmemb * size);
 	return (ptr);
 }
 // #include <stdio.h>
