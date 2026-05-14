@@ -5,8 +5,6 @@ CFLAGS		= -Wall -Wextra -Werror
 AR			= ar rcs
 RM			= rm -f
 
-# ─── Part 1 – libc functions ──────────────────────────────────────────────── #
-
 SRCS		= ft_isalpha.c \
 			  ft_memset.c \
 			  ft_isalnum.c \
@@ -70,5 +68,7 @@ fclean:		clean
 			$(RM) $(NAME)
 
 re:			fclean all
+
+bonus: all
 
 .PHONY:		all clean fclean re
