@@ -6,7 +6,7 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 19:31:23 by prashres          #+#    #+#             */
-/*   Updated: 2026/05/11 14:39:31 by prashres         ###   ########.fr       */
+/*   Updated: 2026/05/13 15:06:49 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,25 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	}
 	temp = ft_lstlast (*lst);
 	temp->next = new;
+}
+void print(t_list *lst)
+{
+	while(lst)
+	{
+		printf("%s -> ", (char*)lst->content);
+		lst = lst->next;
+	}
+	printf("NULL\n");
+}
+int main()
+{
+	t_list *new;
+
+	ft_lstadd_back(&new, ft_lstnew("first"));
+	print(new);
+	
+	ft_lstadd_back(&new, ft_lstnew("second"));
+	print(new);
+	
+	
 }

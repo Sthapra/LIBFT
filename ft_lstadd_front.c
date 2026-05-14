@@ -6,7 +6,7 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 19:01:49 by prashres          #+#    #+#             */
-/*   Updated: 2026/05/11 14:38:30 by prashres         ###   ########.fr       */
+/*   Updated: 2026/05/13 14:08:52 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst || new)
-		return (NULL);
+		return ;
 	new->next = *lst;
 	*lst = new;
 }

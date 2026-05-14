@@ -6,7 +6,7 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 14:32:48 by prashres          #+#    #+#             */
-/*   Updated: 2026/05/11 14:30:21 by prashres         ###   ########.fr       */
+/*   Updated: 2026/05/13 15:47:14 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,14 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	else
 		ft_memcpy(a, b, n);
 	return (dest);
+}
+
+#include <stdio.h>
+int main()
+{
+	char dest[] = "1234567";
+	void *after = ft_memmove(dest + 2, dest, 3);
+	char *res = after;
+	printf("should be 12367, res = %s\n", res); 
+	return 0;
 }

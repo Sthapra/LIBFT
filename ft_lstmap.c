@@ -1,41 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/17 16:25:20 by prashres          #+#    #+#             */
-/*   Updated: 2026/05/14 11:48:57 by prashres         ###   ########.fr       */
+/*   Created: 2026/05/13 12:28:04 by prashres          #+#    #+#             */
+/*   Updated: 2026/05/13 14:11:31 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	i;
-	
-	i = 0; 
-	if (!s[i])
-	 	return (NULL);
-	while (s[i])
+	t_list	*new;
+	t_list	*content;
+	t_list	*node;
+
+	if (!lst)
+		return (NULL);
+	new = malloc (sizeof (t_list));
+	if (!new)
+		return (NULL);
+	while (lst)
 	{
-		if (s[i] == (char)c)
+		content = f(lst->content);
+		node = ft_lstnew(content);
+		if (!node)
 		{
-			return ((char *)&s[i]);
+			del(content);
+			ft_lstclear(&new, del);
+			return (NULL);
 		}
-		i++;
+		ft_lstadd_back(&lst, node);
+		lst = lst->content;
 	}
-	if (s[i] == (char)c)
-	{
-		return ((char *)&s[i]);
-	}
-	return (NULL);
+	return (new);
 }
-// int main ()
-// {
-// 	// char *s = "sdfkadsfasdf";
-// 	printf("%s\n", ft_strchr("\0", '\0'));
-// 	printf("%s\n", strchr("\0",'\0'));
-// }

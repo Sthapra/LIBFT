@@ -6,7 +6,7 @@
 /*   By: prashres <prashres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 21:32:05 by prashres          #+#    #+#             */
-/*   Updated: 2026/05/11 14:38:24 by prashres         ###   ########.fr       */
+/*   Updated: 2026/05/13 14:09:56 by prashres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*current_one;
 
+	if (!lst)
+		return ;
 	current_one = lst;
 	while (current_one)
 	{
